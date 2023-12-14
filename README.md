@@ -1,10 +1,6 @@
 # Gemini
 
-[![Gem Version](https://badge.fury.io/rb/gemini.svg)](https://badge.fury.io/rb/gemini)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/thechrisoshow/gemini/blob/main/LICENSE.txt)
-[![CircleCI Build Status](https://circleci.com/gh/thechrisoshow/gemini.svg?style=shield)](https://circleci.com/gh/thechrisoshow/gemini)
-
-Use the [Gemini API](https://ai.google.dev/docs) with Ruby! 🤖🌌
+Use the [Gemini API](https://ai.google.dev/docs) with Ruby!
 
 You can apply for access to the API [here](https://ai.google.dev/tutorials/setup).
 
