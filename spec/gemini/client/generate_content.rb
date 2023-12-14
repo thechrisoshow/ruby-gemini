@@ -1,6 +1,6 @@
 RSpec.describe Gemini::Client do
-  describe "#complete" do
-    context "with a prompt and max_tokens", :vcr do
+  describe "#generate_content" do
+    context "with a prompt", :vcr do
       let(:prompt) { "How high is the sky?" }
       let(:max_tokens) { 5 }
 
@@ -8,7 +8,6 @@ RSpec.describe Gemini::Client do
         Gemini::Client.new.generate_content(
           parameters: {
             model: model,
-            max_tokens_to_sample: max_tokens,
             prompt: prompt
           }
         )
@@ -21,7 +20,8 @@ RSpec.describe Gemini::Client do
 
         it "succeeds" do
           VCR.use_cassette(cassette) do
-            expect(response["content"].empty?).to eq(false)
+            require 'byebug';byebug
+            expect(response["zcandidates"].empty?).to eq(false)
           end
         end
       end

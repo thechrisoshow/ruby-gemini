@@ -4,6 +4,10 @@ Use the [Gemini API](https://ai.google.dev/docs) with Ruby!
 
 You can apply for access to the API [here](https://ai.google.dev/tutorials/setup).
 
+
+### Massive thanks
+This gem is built off the hard work of [Alex Rudall](https://github.com/alexrudall) and his work on the [ruby-openai](https://github.com/alexrudall/ruby-openai) and [anthropic][https://github.com/alexrudall/anthropic] gems. Thanks Alex!
+
 ### Bundler
 
 Add this line to your application's Gemfile:
@@ -63,8 +67,7 @@ The default timeout for any request using this library is 120 seconds. You can c
 
 ```ruby
 client = Gemini::Client.new(
-    access_token: "access_token_goes_here",
-    request_timeout: 240 # Optional
+    access_token: "access_token_goes_here"
 )
 ```
 
@@ -73,8 +76,6 @@ You can also set these keys when configuring the gem:
 ```ruby
 Gemini.configure do |config|
     config.access_token = ENV.fetch("GEMINI_API_KEY")
-    config.gemini_version = "2023-01-01" # Optional
-    config.request_timeout = 240 # Optional
 end
 ```
 

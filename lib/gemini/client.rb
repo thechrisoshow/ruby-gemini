@@ -12,7 +12,23 @@ module Gemini
     end
 
     def generate_content(parameters: {})
-      Gemini::Client.json_post(path: "generateContent", parameters: parameters)
+      Gemini::Client.json_post(path: "generateContent", parameters: adjusted_parameters(parameters))
+    end
+
+    private
+
+    def adjusted_parameters(params)
+      return params unless params[:prompt]
+      params[:contents] = [
+        {
+          parts: [
+            {
+              text: params.delete(:prompt)
+            }
+          ]
+        }
+      ]
+      params
     end
   end
 end
