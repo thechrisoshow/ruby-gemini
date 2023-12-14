@@ -20,7 +20,6 @@ RSpec.describe Gemini::Client do
 
         it "succeeds" do
           VCR.use_cassette(cassette) do
-            require 'byebug';byebug
             expect(response["candidates"].empty?).to eq(false)
           end
         end

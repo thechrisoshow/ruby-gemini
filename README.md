@@ -73,8 +73,8 @@ response = client.generate_content(
         model: "gemini-pro",
         prompt: "How high is the sky?"
     })
-puts response
-```
+puts response["candidates"][0]["content"]
+
 {
   "parts"=> [
     {
