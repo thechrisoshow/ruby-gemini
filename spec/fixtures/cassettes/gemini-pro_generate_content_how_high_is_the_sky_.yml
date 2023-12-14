@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=<GEMINI_API_KEY>
+    body:
+      encoding: UTF-8
+      string: '{"model":"gemini-pro","contents":[{"parts":[{"text":"How high is the
+        sky?"}]}]}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Thu, 14 Dec 2023 21:33:01 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Server-Timing:
+      - gfet4t7; dur=8528
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicGFydHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJ0ZXh0IjogIlRoZSBza3kgZG9lcyBub3QgaGF2ZSBhIGRlZmluaXRlIGhlaWdodC4gVGhlIGF0bW9zcGhlcmUsIHdoaWNoIGlzIHdoYXQgd2UgY29tbW9ubHkgcmVmZXIgdG8gYXMgXCJ0aGUgc2t5LFwiIGdyYWR1YWxseSB0aGlucyBhcyB5b3UgbW92ZSBhd2F5IGZyb20gdGhlIEVhcnRoJ3Mgc3VyZmFjZS4gVGhlcmUgaXMgbm8gY2xlYXIgYm91bmRhcnkgd2hlcmUgdGhlIGF0bW9zcGhlcmUgZW5kcyBhbmQgc3BhY2UgYmVnaW5zLiBIb3dldmVyLCBkaWZmZXJlbnQgZGVmaW5pdGlvbnMgYW5kIGFwcHJvYWNoZXMgaGF2ZSBiZWVuIHVzZWQgdG8gZGV0ZXJtaW5lIHRoZSBoZWlnaHQgb2YgdGhlIHNreSBvciB0aGUgYXRtb3NwaGVyZTpcblxuMS4gKipLYXJtYW4gTGluZSoqOiBUaGUgS8Ohcm3DoW4gbGluZSwgZGVmaW5lZCBieSB0aGUgRsOpZMOpcmF0aW9uIEHDqXJvbmF1dGlxdWUgSW50ZXJuYXRpb25hbGUgKEZBSSksIGlzIG9mdGVuIHVzZWQgYXMgYSBjb252ZW50aW9uYWwgYm91bmRhcnkgYmV0d2VlbiBFYXJ0aCdzIGF0bW9zcGhlcmUgYW5kIG91dGVyIHNwYWNlLiBJdCBpcyBzZXQgYXQgYW4gYWx0aXR1ZGUgb2YgMTAwIGtpbG9tZXRlcnMgKDYyIG1pbGVzKSBhYm92ZSBzZWEgbGV2ZWwuIEF0IHRoaXMgYWx0aXR1ZGUsIHRoZSBhdG1vc3BoZXJlIGJlY29tZXMgdGhpbiBlbm91Z2ggdGhhdCBhZXJvZHluYW1pYyBsaWZ0IGlzIGluc3VmZmljaWVudCB0byBzdXN0YWluIGFpcmNyYWZ0IGZsaWdodCwgYW5kIG9iamVjdHMgbXVzdCB0cmF2ZWwgYXQgb3JiaXRhbCB2ZWxvY2l0aWVzIHRvIHJlbWFpbiBpbiB0aGUgYWlyLlxuXG4yLiAqKkF0bW9zcGhlcmljIExheWVycyoqOiBUaGUgRWFydGgncyBhdG1vc3BoZXJlIGNvbnNpc3RzIG9mIHNldmVyYWwgbGF5ZXJzLiBUaGUgdHJvcG9zcGhlcmUsIHdoaWNoIGlzIHRoZSBsb3dlc3QgbGF5ZXIsIGV4dGVuZHMgZnJvbSB0aGUgc3VyZmFjZSB1cCB0byBhbiBhdmVyYWdlIGFsdGl0dWRlIG9mIGFib3V0IDEwIGtpbG9tZXRlcnMgKDYgbWlsZXMpLiBUaGUgc3RyYXRvc3BoZXJlLCB3aGljaCBjb250YWlucyB0aGUgb3pvbmUgbGF5ZXIgdGhhdCBzaGllbGRzIHRoZSBFYXJ0aCBmcm9tIGhhcm1mdWwgdWx0cmF2aW9sZXQgcmFkaWF0aW9uLCBleHRlbmRzIGZyb20gdGhlIHRvcCBvZiB0aGUgdHJvcG9zcGhlcmUgdXAgdG8gYWJvdXQgNTAga2lsb21ldGVycyAoMzEgbWlsZXMpLiBUaGUgbWVzb3NwaGVyZSBleHRlbmRzIGZyb20gdGhlIHRvcCBvZiB0aGUgc3RyYXRvc3BoZXJlIHVwIHRvIGFib3V0IDg1IGtpbG9tZXRlcnMgKDUzIG1pbGVzKSwgYW5kIHRoZSB0aGVybW9zcGhlcmUgZXh0ZW5kcyBmcm9tIHRoZSB0b3Agb2YgdGhlIG1lc29zcGhlcmUgdXAgdG8gYWJvdXQgNjAwIGtpbG9tZXRlcnMgKDM3MyBtaWxlcykuXG5cbjMuICoqVmFuIEFsbGVuIFJhZGlhdGlvbiBCZWx0cyoqOiBUaGUgVmFuIEFsbGVuIHJhZGlhdGlvbiBiZWx0cyBhcmUgcmVnaW9ucyBvZiBpbnRlbnNlIGNoYXJnZWQgcGFydGljbGVzIHRoYXQgc3Vycm91bmQgdGhlIEVhcnRoLiBUaGUgaW5uZXIgYmVsdCBleHRlbmRzIGZyb20gYWJvdXQgMSwwMDAga2lsb21ldGVycyAoNjIxIG1pbGVzKSB0byBhYm91dCA2LDAwMCBraWxvbWV0ZXJzICgzLDcyOCBtaWxlcykgYWJvdmUgdGhlIEVhcnRoJ3Mgc3VyZmFjZSwgd2hpbGUgdGhlIG91dGVyIGJlbHQgZXh0ZW5kcyBmcm9tIGFib3V0IDEzLDAwMCBraWxvbWV0ZXJzICg4LDA3OCBtaWxlcykgdG8gYWJvdXQgNjAsMDAwIGtpbG9tZXRlcnMgKDM3LDI4MiBtaWxlcykuXG5cbjQuICoqRXhvc3BoZXJlKio6IFRoZSBleG9zcGhlcmUgaXMgdGhlIG91dGVybW9zdCBsYXllciBvZiB0aGUgRWFydGgncyBhdG1vc3BoZXJlLCBleHRlbmRpbmcgZnJvbSBhYm91dCA2MDAga2lsb21ldGVycyAoMzczIG1pbGVzKSB0byB0aGUgZWRnZSBvZiB0aGUgbWFnbmV0b3NwaGVyZSwgd2hpY2ggaXMgYWJvdXQgMTAsMDAwIGtpbG9tZXRlcnMgKDYsMjE0IG1pbGVzKSBhYm92ZSB0aGUgRWFydGgncyBzdXJmYWNlLiBUaGUgZXhvc3BoZXJlIGlzIGNoYXJhY3Rlcml6ZWQgYnkgZXh0cmVtZWx5IGxvdyBkZW5zaXR5LCB3aXRoIHBhcnRpY2xlcyBvZnRlbiBlc2NhcGluZyBpbnRvIG91dGVyIHNwYWNlLlxuXG5Tbywgd2hpbGUgdGhlcmUgaXMgbm8gZGVmaW5pdGl2ZSBhbnN3ZXIgdG8gaG93IGhpZ2ggdGhlIHNreSBpcywgZGVwZW5kaW5nIG9uIHRoZSBkZWZpbml0aW9uIG9yIGFwcHJvYWNoIHVzZWQsIGl0IGNhbiBiZSBjb25zaWRlcmVkIHRvIGV4dGVuZCBmcm9tIDEwMCBraWxvbWV0ZXJzIChLYXJtYW4gbGluZSkgdG8gc2V2ZXJhbCB0aG91c2FuZCBraWxvbWV0ZXJzIChleG9zcGhlcmUpLiIKICAgICAgICAgIH0KICAgICAgICBdLAogICAgICAgICJyb2xlIjogIm1vZGVsIgogICAgICB9LAogICAgICAiZmluaXNoUmVhc29uIjogIlNUT1AiLAogICAgICAiaW5kZXgiOiAwLAogICAgICAic2FmZXR5UmF0aW5ncyI6IFsKICAgICAgICB7CiAgICAgICAgICAiY2F0ZWdvcnkiOiAiSEFSTV9DQVRFR09SWV9TRVhVQUxMWV9FWFBMSUNJVCIsCiAgICAgICAgICAicHJvYmFiaWxpdHkiOiAiTkVHTElHSUJMRSIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJjYXRlZ29yeSI6ICJIQVJNX0NBVEVHT1JZX0hBVEVfU1BFRUNIIiwKICAgICAgICAgICJwcm9iYWJpbGl0eSI6ICJORUdMSUdJQkxFIgogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgImNhdGVnb3J5IjogIkhBUk1fQ0FURUdPUllfSEFSQVNTTUVOVCIsCiAgICAgICAgICAicHJvYmFiaWxpdHkiOiAiTkVHTElHSUJMRSIKICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICJjYXRlZ29yeSI6ICJIQVJNX0NBVEVHT1JZX0RBTkdFUk9VU19DT05URU5UIiwKICAgICAgICAgICJwcm9iYWJpbGl0eSI6ICJORUdMSUdJQkxFIgogICAgICAgIH0KICAgICAgXQogICAgfQogIF0sCiAgInByb21wdEZlZWRiYWNrIjogewogICAgInNhZmV0eVJhdGluZ3MiOiBbCiAgICAgIHsKICAgICAgICAiY2F0ZWdvcnkiOiAiSEFSTV9DQVRFR09SWV9TRVhVQUxMWV9FWFBMSUNJVCIsCiAgICAgICAgInByb2JhYmlsaXR5IjogIk5FR0xJR0lCTEUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiY2F0ZWdvcnkiOiAiSEFSTV9DQVRFR09SWV9IQVRFX1NQRUVDSCIsCiAgICAgICAgInByb2JhYmlsaXR5IjogIk5FR0xJR0lCTEUiCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiY2F0ZWdvcnkiOiAiSEFSTV9DQVRFR09SWV9IQVJBU1NNRU5UIiwKICAgICAgICAicHJvYmFiaWxpdHkiOiAiTkVHTElHSUJMRSIKICAgICAgfSwKICAgICAgewogICAgICAgICJjYXRlZ29yeSI6ICJIQVJNX0NBVEVHT1JZX0RBTkdFUk9VU19DT05URU5UIiwKICAgICAgICAicHJvYmFiaWxpdHkiOiAiTkVHTElHSUJMRSIKICAgICAgfQogICAgXQogIH0KfQo=
+  recorded_at: Thu, 14 Dec 2023 21:33:01 GMT
+recorded_with: VCR 6.1.0

@@ -89,8 +89,15 @@ response = client.generate_content(
         model: "gemini-pro",
         prompt: "How high is the sky?"
     })
-puts response["content"]
-# => " The sky has no definitive"
+puts response
+```
+{
+  "parts"=> [
+    {
+      "text"=>"The sky does not have a definite height..."
+    }
+  ]
+}
 ```
 
 

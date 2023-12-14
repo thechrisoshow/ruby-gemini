@@ -13,15 +13,14 @@ RSpec.describe Gemini::Client do
         )
       end
       let(:text) { response.dig("parts", 0, "text") }
-      let(:cassette) { "#{model} content #{prompt}".downcase }
+      let(:cassette) { "#{model} generate content #{prompt}".downcase }
 
       context "with model: gemini-pro" do
         let(:model) { "gemini-pro" }
 
         it "succeeds" do
           VCR.use_cassette(cassette) do
-            require 'byebug';byebug
-            expect(response["zcandidates"].empty?).to eq(false)
+            expect(response["candidates"].empty?).to eq(false)
           end
         end
       end

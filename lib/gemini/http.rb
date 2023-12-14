@@ -10,7 +10,6 @@ module Gemini
       to_json(conn.post(uri(path: adjusted_path(path: path, parameters: parameters))) do |req|
         if parameters[:stream].is_a?(Proc)
           req.options.on_data = to_json_stream(user_proc: parameters[:stream])
-          parameters[:stream] = true # Necessary to tell Gemini to stream.
         end
 
         req.headers = headers
@@ -39,6 +38,10 @@ module Gemini
       api_suffix = URI.encode_www_form({
         key: Gemini.configuration.access_token
       })
+
+      if parameters[:stream]
+        path = "stream" + text.sub(/\A./) { |match| match.upcase }
+      end
 
       "#{prefix}#{path}?#{api_suffix}"
     end
