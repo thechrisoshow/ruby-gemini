@@ -1,5 +1,8 @@
 # Gemini
 
+[![Gem Version](https://img.shields.io/gem/v/ruby-gemini.svg)](https://rubygems.org/gems/ruby-gemini)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/thechrisoshow/ruby-gemini/blob/main/LICENSE.txt)
+
 Use the [Gemini API](https://ai.google.dev/docs) with Ruby!
 
 You can apply for access to the API [here](https://ai.google.dev/tutorials/setup).
