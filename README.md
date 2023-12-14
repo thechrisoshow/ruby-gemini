@@ -13,7 +13,7 @@ This gem is built off the hard work of [Alex Rudall](https://github.com/alexruda
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "gemini"
+gem "ruby-gemini"
 ```
 
 And then execute:
