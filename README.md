@@ -6,7 +6,7 @@ You can apply for access to the API [here](https://ai.google.dev/tutorials/setup
 
 
 ### Massive thanks
-This gem is built off the hard work of [Alex Rudall](https://github.com/alexrudall) and his work on the [ruby-openai](https://github.com/alexrudall/ruby-openai) and [anthropic][https://github.com/alexrudall/anthropic] gems. Thanks Alex!
+This gem is built off the hard work of [Alex Rudall](https://github.com/alexrudall) and his work on the [ruby-openai](https://github.com/alexrudall/ruby-openai) and [anthropic](https://github.com/alexrudall/anthropic) gems. Thanks Alex!
 
 ### Bundler
 
@@ -58,25 +58,6 @@ Then you can create a client like this:
 
 ```ruby
 client = Gemini::Client.new
-```
-
-#### Change version or timeout
-
-
-The default timeout for any request using this library is 120 seconds. You can change that by passing a number of seconds to the `request_timeout` when initializing the client.
-
-```ruby
-client = Gemini::Client.new(
-    access_token: "access_token_goes_here"
-)
-```
-
-You can also set these keys when configuring the gem:
-
-```ruby
-Gemini.configure do |config|
-    config.access_token = ENV.fetch("GEMINI_API_KEY")
-end
 ```
 
 ### Text content
